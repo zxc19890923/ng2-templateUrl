@@ -1,0 +1,24 @@
+// 组件
+// 从核心模块中导入Component 同理(NgModule)
+import {Component} from "@angular/core";
+// 配置组件
+@Component({
+    // css原则器的名称
+    selector: "my-app",
+    // template: "<p>Nihaoa</p>"
+    // 注意些templateUrl的时候必须从模板所在目录的上一次目录开始写
+    templateUrl: "app/templates/one.html"
+})
+// 输出数据, view层访问
+export class AppComponent {
+
+}
+
+
+
+app文件夹中包括 
+1. app.component.ts组件 
+2. templates模板文件夹
+    one.html
+按理说，在app.component.ts中加载模板文件只需要从 templates/one.html就可以但是不是这样的
+正确： app/templates/one.html才可以
